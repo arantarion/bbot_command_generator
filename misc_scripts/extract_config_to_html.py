@@ -10,7 +10,7 @@ rows = soup.find_all('tr')[1:]
 def generate_module_html(row):
     cols = row.find_all('td')
     module_name = cols[0].text.strip()
-    data_type = cols[1].text.strip()
+    type = cols[1].text.strip()
     desc = cols[2].text.strip()
     default = cols[3].text.strip()
     
@@ -19,11 +19,11 @@ def generate_module_html(row):
 <div class="tooltip">
 <label>
     <input type="checkbox" data-option="{module_name}" class="config">
-    <span class="checkmark"></span> {module_name.replace("modules.", "")}
+    <span class="checkmark"></span> {module_name}
 </label>
 <span class="tooltiptext">
     <table class="tooltip-table">
-        <tr><td><strong>Type:</strong></td><td>{data_type}</td></tr>
+        <tr><td><strong>Type:</strong></td><td>{type}</td></tr>
         <tr><td><strong>Description:</strong></td><td>{desc}</td></tr>
         <tr><td><strong>Default:</strong></td><td>{default}</td></tr>
     </table>
