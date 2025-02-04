@@ -387,7 +387,11 @@
         </div>
         <div class="input-field">
           <label for="blocklist">Blocklist</label>
-          <input type="text" id="blocklist" placeholder="Enter URL or IP (seperated by comma)" />
+          <input
+            type="text"
+            id="blocklist"
+            placeholder="Enter URL or IP (seperated by comma)"
+          />
         </div>
         <div class="checkbox-group">
           <label for="modules">
@@ -14199,7 +14203,7 @@
             <input
               type="text"
               id="name"
-              placeholder="Enter name"
+              placeholder="Enter project name"
               style="
                 background-color: #333;
                 color: #fff;
@@ -14347,7 +14351,8 @@
               id="minimal-dns"
               data-option="-c dns.minimal=true"
             />
-            <span class="checkmark"></span> Minimal DNS resolution (just A and AAAA)
+            <span class="checkmark"></span> Minimal DNS resolution (just A and
+            AAAA)
           </label>
           <label>
             <input
@@ -14355,7 +14360,8 @@
               id="custom-header"
               data-option="-H [HEADER]"
             />
-            <span class="checkmark"></span> List of custom headers as key value pairs (header=value)
+            <span class="checkmark"></span> List of custom headers as key value
+            pairs (header=value)
           </label>
           <label>
             <input
@@ -14363,7 +14369,8 @@
               id="custom-useragent"
               data-option="-ua [USERAGENT]"
             />
-            <span class="checkmark"></span> Set the user-agent for all HTTP requests
+            <span class="checkmark"></span> Set the user-agent for all HTTP
+            requests
           </label>
           <label>
             <input
@@ -14379,7 +14386,8 @@
               id="strict-scope"
               data-option="--strict-scope"
             />
-            <span class="checkmark"></span> Don't consider subdomains of target/whitelist to be in-scope
+            <span class="checkmark"></span> Don't consider subdomains of
+            target/whitelist to be in-scope
           </label>
           <label>
             <input
@@ -14407,11 +14415,13 @@
           </label>
           <label>
             <input type="checkbox" id="yes" data-option="--force" />
-            <span class="checkmark"></span> Run scan even in the case of condition violations or failed module setups
+            <span class="checkmark"></span> Run scan even in the case of
+            condition violations or failed module setups
           </label>
           <label>
             <input type="checkbox" id="yes" data-option="--fast-mode" />
-            <span class="checkmark"></span> Scan only the provided targets as fast as possible, with no extra discovery
+            <span class="checkmark"></span> Scan only the provided targets as
+            fast as possible, with no extra discovery
           </label>
           <label>
             <input type="checkbox" id="yes" data-option="--dry-run" />
@@ -14634,7 +14644,9 @@
           .getElementById("output-directory")
           .value.trim();
         let command = "bbot";
-        let output_module = document.getElementById("output-module").value.trim();
+        let output_module = document
+          .getElementById("output-module")
+          .value.trim();
 
         if (target) {
           command += ` -t ${target}`;
