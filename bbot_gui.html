@@ -163,6 +163,7 @@
         white-space: normal;
         overflow-wrap: break-word;
       }
+
       /*
       .tooltip:hover .tooltiptext {
         visibility: visible;
@@ -339,10 +340,28 @@
         border-width: 0 3px 3px 0;
         transform: rotate(45deg);
       }
+      
+      #modules-options, #flags-options, #config-options, #presets-options {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        row-gap: 0;
+      }
+
+      #flags-options, #presets-options, #config-options {
+        padding-left: 20px;
+        padding-top: 15px;
+      }
 
       .tooltip {
         position: relative;
         display: inline-block;
+        width: 30%;
+      }
+
+      #config-options .tooltip {
+        width: 50%;
       }
 
       .tooltip:hover .tooltiptext {
@@ -14674,7 +14693,7 @@
       function toggleSection(sectionId) {
         var section = document.getElementById(sectionId);
         if (section.style.display === "none") {
-          section.style.display = "block";
+          section.style.display = "flex";
         } else {
           section.style.display = "none";
         }
