@@ -283,7 +283,7 @@
       }
 
       #modules-options {
-        display: flex !important;
+        display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
@@ -351,8 +351,11 @@
         border-width: 0 3px 3px 0;
         transform: rotate(45deg);
       }
-      
-      #modules-options, #flags-options, #config-options, #presets-options {
+
+      #modules-options,
+      #flags-options,
+      #config-options,
+      #presets-options {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
@@ -360,7 +363,9 @@
         row-gap: 0;
       }
 
-      #flags-options, #presets-options, #config-options {
+      #flags-options,
+      #presets-options,
+      #config-options {
         padding-left: 20px;
         padding-top: 15px;
       }
@@ -14384,8 +14389,8 @@
             <input
               type="text"
               id="burp-proxy"
-              placeholder="http://127.0.0.1:8080"
-              value="http://127.0.0.1:8080"
+              placeholder="https://127.0.0.1:8080"
+              value="https://127.0.0.1:8080"
               style="
                 background-color: #333333;
                 color: #ffffff;
@@ -14666,15 +14671,12 @@
       </div>
     </div>
 
-
-
-        <!--
+    <!--
 % ==============================================================================
 %                                    Scripts
 % ==============================================================================
 
  -->
-
 
     <script>
       function copyPresetCommand(button) {
@@ -14701,12 +14703,22 @@
         updateCommand();
       }
 
+      // function toggleSection(sectionId) {
+      //   var section = document.getElementById(sectionId);
+      //   if (section.style.display === "none") {
+      //     section.style.display = "flex";
+      //   } else {
+      //     section.style.display = "none";
+      //   }
+      // }
       function toggleSection(sectionId) {
         var section = document.getElementById(sectionId);
-        if (section.style.display === "none") {
-          section.style.display = "flex";
+        var isHidden = window.getComputedStyle(section).display === "none";
+
+        if (isHidden) {
+          section.style.display = "flex"; // Show the section
         } else {
-          section.style.display = "none";
+          section.style.display = "none"; // Hide the section
         }
       }
       function clearInput(inputId) {
