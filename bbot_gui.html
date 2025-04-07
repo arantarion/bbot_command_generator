@@ -272,10 +272,20 @@
       }
 
       .modules-grid {
-        display: grid;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
         grid-template-columns: repeat(5, 1fr);
         gap: 15px;
         padding-left: 20px;
+      }
+
+      #modules-options {
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
       }
 
       .checkbox-item {
@@ -285,6 +295,7 @@
         padding: 5px;
         background-color: #1e1e1e;
         border-radius: 4px;
+        width: 20%;
       }
 
       .checkbox-item label {
