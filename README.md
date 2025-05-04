@@ -18,16 +18,7 @@ Choose the modules, flags, and presets you'd like to include in your command. To
 - **Proxy through Burp**: Enable this option to route traffic through Burp Suite. You can use the default proxy URL (`http://127.0.0.1:8080`) or specify a custom one.
 
 ## Installation
-
-1. **Download or Clone the Repository**
-   ```bash
-   # HTTPS
-   git clone https://git.syss.intern/hweckermann/bbot-command-generator.git
-
-   # SSH
-   git clone git@git.syss.intern:hweckermann/bbot-command-generator.git
-   ```
-2. **Open the `bbot_gui.html` file in your web browser** to start using the tool.
+1. **Open the `bbot_gui.html` file in your web browser** to start using the tool.
 
 
 ## Contributing
